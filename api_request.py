@@ -86,7 +86,7 @@ class DataBase(GetDB.GETDB):
         return (f"El coctel: {name} fue actualizado")
 
 if __name__ == '__main__':
-    db = DB()
+    db = DataBase()
         
     
             
