@@ -1,6 +1,6 @@
 from abc import ABC, abstractmethod
 
-class api_request(ABC):
+class GETAPI(ABC):
     @abstractmethod
     def search_name(self, bebida_name):
         pass

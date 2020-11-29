@@ -18,7 +18,7 @@ class APICOCTEL(GETAPI.GETAPI):
         characteristics = []
         
         for identification in id_coctel:
-            identification = id_cocteli].get ("strDrink")
+            identification = id_coctel[i].get ("strDrink")
             namecoctels.append((f"Coctel {identification} number {i}"))
             
             identification = id_coctel[i]
@@ -85,7 +85,7 @@ class DataBase(GetDB.GETDB):
         
         return (f"El coctel: {name} fue actualizado")
 
-if name __name__ == '__main__':
+if __name__ == '__main__':
     db = DB()
         
     
