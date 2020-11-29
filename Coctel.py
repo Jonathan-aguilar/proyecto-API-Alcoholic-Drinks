@@ -1,4 +1,4 @@
-class coctel():
+class Coctel():
     def __init__(self,id,name,tag,alcohol,instructions,imagen,ingredients):
         self.id=id
         self.name=name
