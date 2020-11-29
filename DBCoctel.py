@@ -14,7 +14,7 @@ def main():
     ingredients Text)''')
     conexion.commit()
     
-    cursor.execute('''CREATE TABLE IF NOT EXITS COCTELES 
+    cursor.execute('''CREATE TABLE IF NOT EXISTS COCTELES 
     (id Number,
     name Text,
     tag Text,
