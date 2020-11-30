@@ -19,7 +19,7 @@ class APICOCTEL(GETAPI.GETAPI):
         
         for identification in id_coctel:
             identification = id_coctel[i].get ("strDrink")
-            namecoctels.append((f"Coctel {identification} number {i}"))
+            namecoctels.append()
             
             identification = id_coctel[i]
             characteristics.append(identification)
@@ -43,7 +43,7 @@ class APICOCTEL(GETAPI.GETAPI):
         ingredients=""
         ingredient=1
         while ingredient <= 15:
-            if id_coctel[selection].get(f"strIngredient{ingredient}") != "" or id_coctel[selection].get(f"strIngredient{ingredient}") != " " or id_coctel[selection].get(f"strIngredient{ingredient}") is None:
+            if (id_coctel[selection].get(f'strIngredient {ingredient}') != "" or id_clone[selection].get(f'strIngredient{ingredient}') != " " or id_coctel[selection].get(f'strIngredient{ingredient}') is None:
                 ingredients += id_coctel[selection].get(f"strIngredient{ingredient}")
                 ingredients += ","
                 ingredient +=1
@@ -59,8 +59,8 @@ class DataBase(GetDB.GETDB):
         self.conexion = sqlite3.connect(file)
         self.cursor = self.conexion.cursor()
         
-    def SaveCoctel(self,debida):
-        self.cursor.execute("INSERT INTO COCTELES_PREFERIDOS VALUES ('{}','{}','{}','{}','{}','{}','{}')".format(bebida.id,bebida.name,bebida.tag,bebida.alcohol.bebida.instructions,bebida.imagen,bebida.ingredients))
+    def SaveCoctel(self,coctel):
+        self.cursor.execute("INSERT INTO COCTELES_PREFERIDOS VALUES ('{}','{}','{}','{}','{}','{}','{}')".format(coctel.id,coctel.name,coctel.tag,coctel.alcohol.coctel.instructions,coctel.imagen,coctel.ingredients))
         self.conexion.commit()
         return (f"EL registro se guardo con exito")
     
